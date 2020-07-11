@@ -1,0 +1,47 @@
+<mvc:View controllerName="ZHR_BANK_DETAILS1.ZHR_BANK_DETAILS1.controller.BANK1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Panel id="__panel1">
+<content>
+<List id="List"
+items="{jsonmodel>/ZHR_BANKSet}" 
+headerText="Employees" 
+mode="SingleSelectMaster" 
+selectionChange="onPress">
+<StandardListItem id="Sli"
+title="{jsonmodel>Pernr}" 
+description="{jsonmodel>Ename}" 
+info="{jsonmodel>Bankn}"/>
+</List>
+</content>
+					
+					
+</Panel>
+<Panel id="__panel0" headerText="{i18n>addressdetails}">
+<content>
+<Label text="EmployeeID" width="100%" id="__label0"/>
+<Input width="100%" id="__input0"/>
+<Label text="Employee Name" width="100%" id="__label1"/>
+<Input width="100%" id="__input1"/>
+<Label text="IFSC" width="100%" id="__label2"/>
+<Input width="100%" id="__input2"/>
+<Label text="acc" width="100%" id="__label3"/>
+<Input width="100%" id="__input3"/>
+<Button  icon="sap-icon://activate" text="{i18n>create}" width="100px" id="__button1" press="onSave"/>
+<Button text="{i18n>update}" width="100px" id="__button2" press="onUpdate"/>
+<Button text="{i18n>delete}" width="100px" id="__button0" press="onDelete"/>
+</content>
+</Panel>
+</content>
+
+
+
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
